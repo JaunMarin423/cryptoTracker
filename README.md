@@ -1,6 +1,7 @@
 # Crypto Tracker
 
 _Este proyecto esta pensado para mejorar y aprender más asobre React Native_
+![Captura de recetas](.readme-static/Captura.PNG)
 
 ## Comenzando 🚀🏍
 
