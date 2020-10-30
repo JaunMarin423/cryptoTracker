@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, FlatList, Text, Image, StyleSheet, Platform} from 'react-native';
+import {View, FlatList,Pressable, Text, Image, StyleSheet, Platform} from 'react-native';
 import ArrowDown from "cryptoTracker/src/assets/arrow_down.png"
 import ArrowUp from "cryptoTracker/src/assets/arrow_up.png"
 import Colors from "cryptoTracker/src/res/colors/"
@@ -7,7 +7,8 @@ import Colors from "cryptoTracker/src/res/colors/"
 const CoinsItem = ({item}) => {
 
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container}>
+
       <View style={styles.row}>
         <Text style={styles.rank}>{item.rank} </Text>
         <Text style={styles.symbolText}> {item.symbol} </Text>
@@ -22,7 +23,7 @@ const CoinsItem = ({item}) => {
           source={item.percent_change_24h>0?ArrowUp:ArrowDown} 
           />
       </View>
-    </View>
+    </Pressable>
   );
 };
 

@@ -17,7 +17,6 @@ class CoinsScreen extends Component {
   };
 
   componentDidMount = async () => {
-    this.setState({loading: true});
 
     const res = await Http.instance.get(
       'https://api.coinlore.net/api/tickers/',
@@ -40,7 +39,7 @@ class CoinsScreen extends Component {
         {loading ? <ActivityIndicator style={styles.loader} color="#fff" size="large" /> : null}
         <FlatList
           data={coins}
-          renderItem={({item}) => <CoinsItem item={item} />}
+          renderItem={({item}) => <CoinsItem item={item}  onPress={this.handlePress} />}
         />
       </View>
     );
