@@ -4,10 +4,10 @@ import ArrowDown from "cryptoTracker/src/assets/arrow_down.png"
 import ArrowUp from "cryptoTracker/src/assets/arrow_up.png"
 import Colors from "cryptoTracker/src/res/colors/"
 
-const CoinsItem = ({item}) => {
+const CoinsItem = ({item, onPress}) => {
 
   return (
-    <Pressable style={styles.container}>
+    <Pressable onPress={onPress} style={styles.container}>
 
       <View style={styles.row}>
         <Text style={styles.rank}>{item.rank} </Text>
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomColor: Colors.zircon,
     borderBottomWidth: 1,
-    marginLeft: Platform.OS == 'ios' ? 16 : 0
+    marginLeft: Platform.OS == 'ios' ? 16 : 0,
+    paddingLeft: Platform.OS == 'ios' ? 0 : 16,
   },
   row: {
     flexDirection: 'row',
