@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {View, Image, Text, SectionList, FlatList, StyleSheet} from 'react-native';
-import Colors from 'cryptoTracker/src/res/colors/';
 import Http from 'cryptoTracker/src/libs/http';
 import CoinMarketItem from './CoinMarketItem';
+import Colors from 'cryptoTracker/src/res/colors/';
 
 class CoinDetailScreen extends Component {
   state = {
@@ -57,7 +57,7 @@ class CoinDetailScreen extends Component {
           <Text style={styles.sectionText}>${coin.price_usd}</Text>
         </View>
 
-        <Text>Markets</Text>
+        <Text style={styles.marketTitle}>Markets</Text>
 
         <FlatList
           horizontal={true}
@@ -99,6 +99,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     marginRight: 16,
+  },
+  marketTitle: {
+    color: "#fff",
+    fontSize: 16,
+    paddingLeft: 16,
+    fontWeight: 'bold',
+  },
+  list: {
+    maxHeight: 100,
+    paddingLeft: 16,
   },
   iconImage: {
     width: 25,
