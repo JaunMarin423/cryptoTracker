@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, FlatList,Pressable, Text, Image, StyleSheet, Platform} from 'react-native';
+import {View, FlatList ,Pressable, Text, Image, StyleSheet, Platform} from 'react-native';
 import ArrowDown from "cryptoTracker/src/assets/arrow_down.png"
 import ArrowUp from "cryptoTracker/src/assets/arrow_up.png"
 import Colors from "cryptoTracker/src/res/colors/"
